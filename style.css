@@ -1,0 +1,281 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'ClashGrotesk-Semibold';
+    src: url('./fonts/ClashGrotesk-Semibold.woff2') format('woff2'),
+         url('./fonts/ClashGrotesk-Semibold.woff') format('woff'),
+         url('./fonts/ClashGrotesk-Semibold.ttf') format('truetype');
+         font-weight: 600;
+         font-display: swap;
+         font-style: normal;
+  }
+  @font-face {
+    font-family: 'ClashGrotesk-Regular';
+    src: url('../fonts/ClashGrotesk-Regular.woff2') format('woff2'),
+         url('../fonts/ClashGrotesk-Regular.woff') format('woff'),
+         url('../fonts/ClashGrotesk-Regular.ttf') format('truetype');
+         font-weight: 400;
+         font-display: swap;
+         font-style: normal;
+  }
+  
+  
+  @font-face {
+    font-family: 'ClashGrotesk-Bold';
+    src: url('./fonts/ClashGrotesk-Bold.woff2') format('woff2'),
+         url('./fonts/ClashGrotesk-Bold.woff') format('woff'),
+         url('./fonts/ClashGrotesk-Bold.ttf') format('truetype');
+         font-weight: 700;
+         font-display: swap;
+         font-style: normal;
+  }
+html,body{
+    width: 100%;
+    height: 100%;
+    
+}
+#main{
+    width: 100%;
+    min-height: 100vh;
+}
+#top{
+    width: 100%;
+    height: 50vh;
+    /* background-color: #06113C; */
+    background-image: url(./cover/bgimg.jpg) ;
+    background-size: cover;
+    background-position: 50% 60%;
+    color: #11d2cf;
+    font-size: 20cqi;
+    font-family: 'ClashGrotesk-Bold';
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+   
+}
+#bottom{
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+   
+}
+#bone{
+    width: 25%;
+    min-height: inherit;
+    background-color: #000000;
+}
+
+
+#btwo{
+    width: 25%;
+    min-height: inherit;
+    background-color: #6e0114;
+    padding: 0 20px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+#btwo a{
+    font-size: 3.5cqi;
+    text-decoration: none;
+    border-bottom: 2px solid #A7D397;
+    color: #A7D397;
+    font-family: 'ClashGrotesk-Semibold';
+    
+}
+#btwo a:hover{
+  color: #8B9A46;
+  transition: 1s ease;
+  border-bottom: 2px solid #8B9A46;
+  
+}
+#bthree{
+    width: 50%;
+    min-height: inherit;
+    position: relative;
+    overflow: hidden;
+    /* display: flex;
+  flex-direction:row;
+  justify-content:space-between;
+  align-items: center;
+  padding: 0 6px; */
+
+  
+}
+
+#cover{
+  width: 100%;
+  height: 50vh;
+  
+  
+}
+#cover img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#sname{
+  pointer-events: none;
+  width: 100%;
+  height: 50vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #EFEAD8;
+    font-size: 70px;
+    font-family: 'ClashGrotesk-Semibold';
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2vw 0;
+  
+}
+#sname a{
+  pointer-events: fill;
+  text-decoration: none;
+  font-family: 'ClashGrotesk-Semibold';
+  font-size: 50px;
+  color: #6e0114;
+  transition: 1s ease;
+}
+#sname a:hover{
+  color: #df0328;
+
+}
+#sname button{
+  pointer-events: fill;
+  width: 15vw;
+  height: 4vw;
+  font-size: 30px;
+  padding: 2px 6px;
+  background-color: #6e0114;
+  font-family: 'ClashGrotesk-Regular';
+  border-radius: 1px;
+  border: 0;
+  color: #EFEAD8;
+  transition: 1s ease;
+}
+#sname button:hover{
+  color: #ffffff;
+  background-color: #b21630;
+}
+.container {
+    width: 350px;
+    height: 500px;
+    perspective: 800px;
+  }
+  
+#bone:hover > .card {
+    cursor: pointer;
+    transform: rotateY(180deg);
+  }
+  
+  
+  .card {
+    min-height: 50vh;
+    width: 100%;
+    position: relative;
+    transition: transform 1500ms;
+    transform-style:preserve-3d;
+  }
+  
+  .front,
+  .back {
+    height: 100%;
+    width: 100%;
+    /* border-radius: 2rem;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25); */
+    position: absolute;
+    backface-visibility: hidden;
+  }
+  
+  .front {
+    /* background-image: url(./cover/story.jpg); */
+    background-size: cover;
+    background-position: 50% 70%;
+    background-color: #6e0114;
+    color: #A7D397;
+    font-size: 30px;
+    /* text-align:center; */
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  font-family: 'ClashGrotesk-Semibold';
+  padding: 8px 0;
+    
+    
+  }
+  .front img{
+    width: 85%;
+    height: 70%;
+    border-radius: 10px;
+  }
+  
+  .back {
+    background-color: #103848;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    font-family: 'ClashGrotesk-Regular';
+        color: #ffffff;
+    padding: 0 15px;
+    font-size: 30px;
+  }
+
+  @media (max-width:500px){
+    #top{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: url(./img/bgsmall.jpg) ;
+      font-size: 25vw;
+      height: 100vh;
+      background-position: 50% 90%;
+      
+    }
+
+    #bottom{
+      flex-direction: column;
+    }
+    #bone{
+      width: 100%;
+    }
+    #btwo{
+      width: 100%;
+    }
+    #btwo a{
+      font-size: 15vw;
+    }
+    #bthree{
+      width: 100%;
+    }
+    #sname {
+      font-size: 40px; /* Adjust the font size for smaller screens */
+      padding: 1vw 0;
+  }
+
+  #sname a {
+      font-size: 30px; /* Adjust the font size for smaller screens */
+  }
+
+  #sname button {
+      width: 40vw; /* Adjust the button width for smaller screens */
+      height: 10vw; /* Adjust the button height for smaller screens */
+      font-size: 20px; /* Adjust the font size for smaller screens */
+  }
+    
+
+    
+  } 
+  
